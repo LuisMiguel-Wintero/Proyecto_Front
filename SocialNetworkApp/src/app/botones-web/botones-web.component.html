@@ -1,4 +1,20 @@
-<button>Mis Historias</button>
-<button>Mis Cosas</button>
-<button>Mis Colegas</button>
-<button>Eventos</button>
+<nav>
+    <div>
+
+        <button (click)='goHome()'>Mis Historias</button>
+    </div>
+    <div>
+
+        <button (click)= 'goCosas()'>Mis Cosas</button>
+    </div>
+    <div>
+
+        <button (click)='goColegas()'>Mis Colegas</button>
+    </div>
+    <div>
+
+        <button (click)='goEventos()'>Eventos</button>
+    </div>
+</nav>
+<br>
+<h1> {{user.name}} </h1>

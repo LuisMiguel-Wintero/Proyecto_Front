@@ -8,7 +8,10 @@ import { MisHistoriasComponent } from './mis-historias/mis-historias.component';
 import { MisCosasComponent } from './mis-cosas/mis-cosas.component';
 import { MisColegasComponent } from './mis-colegas/mis-colegas.component';
 import { EventosComponent } from './eventos/eventos.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+import { PieDePaginaComponent } from './pie-de-pagina/pie-de-pagina.component';
+
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MisCosasComponent,
     MisColegasComponent,
     EventosComponent,
-    PageNotFoundComponent
+    PieDePaginaComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
