@@ -34,7 +34,5 @@ export class BotonesWebComponent implements OnInit {
   goEventos(){
     this.router.navigate(['/eventos']);
   }
-  goNot(){
-    this.router.navigate(['**']);
-  }
+  
 }
