@@ -1,0 +1,8 @@
+nav{
+    display: flex;
+    flex-direction:row ;
+    justify-content: flex-end;
+}
+button{
+    margin : 3px;
+}

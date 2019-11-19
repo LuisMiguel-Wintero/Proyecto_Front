@@ -12,6 +12,8 @@ import { EventosComponent } from './eventos/eventos.component';
 import { PieDePaginaComponent } from './pie-de-pagina/pie-de-pagina.component';
 
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ItemListComponent } from './item-list/item-list.component';
+import { BotonesItemComponent } from './botones-item/botones-item.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     MisColegasComponent,
     EventosComponent,
     PieDePaginaComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ItemListComponent,
+    BotonesItemComponent
   ],
   imports: [
     BrowserModule,

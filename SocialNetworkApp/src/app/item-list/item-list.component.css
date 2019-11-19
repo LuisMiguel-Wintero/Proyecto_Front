@@ -1,0 +1,13 @@
+ul{
+    background-color: blanchedalmond;
+}
+section{
+    border : 1px solid black;
+}
+a{
+    margin-left: 20px;
+}
+p{
+    display: flex;
+    justify-content: center;
+}
