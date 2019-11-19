@@ -8,9 +8,9 @@ import { MisHistoriasComponent } from './mis-historias/mis-historias.component';
 import { MisCosasComponent } from './mis-cosas/mis-cosas.component';
 import { MisColegasComponent } from './mis-colegas/mis-colegas.component';
 import { EventosComponent } from './eventos/eventos.component';
-
+import {AppServicesService} from './services/app-services.service';
 import { PieDePaginaComponent } from './pie-de-pagina/pie-de-pagina.component';
-
+import { HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ItemListComponent } from './item-list/item-list.component';
 import { BotonesItemComponent } from './botones-item/botones-item.component';
@@ -31,9 +31,10 @@ import { BotonesItemComponent } from './botones-item/botones-item.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    routing
+    routing,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AppServicesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
