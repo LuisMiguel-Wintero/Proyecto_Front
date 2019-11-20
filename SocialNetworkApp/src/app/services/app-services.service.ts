@@ -22,7 +22,7 @@ export class AppServicesService {
   //GET
   
   getUserLogged(): Observable<UserModel>{
-    return this.http.get<UserModel>('http://192.168.1.100/users/1');
+    return this.http.get<UserModel>('http://localhost:8080/users/1');
   }
 
   //  getUserLogged(){ 
