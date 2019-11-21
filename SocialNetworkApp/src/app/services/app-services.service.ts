@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UserModel } from '../domain/user-model';
 import { Observable } from 'rxjs';
+import { HistorysModel } from '../domain/historys-model';
 
 
 
@@ -12,7 +13,7 @@ import { Observable } from 'rxjs';
 export class AppServicesService {
 
 
-  // IPserver : 'http://192.168.1.100'
+  //  URL_BASE : 'http://192.168.1.100'
   constructor(private http: HttpClient ) { }
 
   //CRUD
@@ -20,15 +21,20 @@ export class AppServicesService {
   //Mis-Historias
 
   //GET
-  
+
   getUserLogged(): Observable<UserModel>{
     return this.http.get<UserModel>('http://localhost:8080/users/1');
   }
 
-  //  getUserLogged(){ 
-  //    return this.http.get('${this.IPserver}/users');
-  //    }
-  
+  //POST
+
+   addHistory (history: HistorysModel): Observable<HistorysModel> {
+    return this.http.post<HistorysModel>('http://localhost:8080/messages',history,httpOptions);
+     }
+
+
+
+
 
 }
 

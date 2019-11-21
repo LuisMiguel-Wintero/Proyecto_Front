@@ -26,7 +26,7 @@ export class BotonesWebComponent implements OnInit {
      this.service.getUserLogged()
        .subscribe((data: UserModel) => this.user = data,
                    error => console.error(error),
-                   () => console.log('My item list is loaded')
+                   () => console.log('User loaded')
              );
   }
 
