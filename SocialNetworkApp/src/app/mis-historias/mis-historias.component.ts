@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AppServicesService } from '../services/app-services.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HistorysModel } from '../domain/historys-model';
+import { UserModel } from '../domain/user-model';
 
 
 @Component({
@@ -10,7 +11,9 @@ import { HistorysModel } from '../domain/historys-model';
   styleUrls: ['./mis-historias.component.css']
 })
 export class MisHistoriasComponent implements OnInit {
-  historia: HistorysModel;
+  historia: HistorysModel[];
+
+  nuevoMensaje: string;
 
   constructor(private service:AppServicesService, private route: ActivatedRoute, private router: Router) { }
 
@@ -28,10 +31,19 @@ export class MisHistoriasComponent implements OnInit {
 
 //POST
 
-// addHistory(history: HistorysModel){
-//   this.service.addHistory(history)
-//     .subscribe(history => this.historia.push(history));
-//  }
+ addHistory(){
+
+  let historieta = new HistorysModel();
+  let fecha = new Date();
+  let actual = (fecha.getDate() + "/" + (fecha.getMonth() +1) + "/" + fecha.getFullYear());
+
+  historieta.content=this.nuevoMensaje;
+  historieta.publish_date= actual;
+  historieta.users_id= 1;
+
+   this.service.addHistory(historieta)
+     .subscribe(historieta => this.historia.push(historieta));
+  }
 
 
 

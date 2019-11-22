@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ItemListComponent } from './item-list/item-list.component';
 import { BotonesItemComponent } from './botones-item/botones-item.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { BotonesItemComponent } from './botones-item/botones-item.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     routing,
     HttpClientModule
   ],

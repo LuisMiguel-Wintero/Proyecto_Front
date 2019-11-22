@@ -2,8 +2,8 @@
 <app-root></app-root>
 <div>
     <h3>Di algo</h3> 
-    <form> <textarea name="Historia" id="" cols="100" rows="5"></textarea></form>
-    <button>Enviar</button>
+        <textarea [(ngModel)]="nuevoMensaje" name="Historia" id="" cols="100" rows="5"  ></textarea>
+    <button (click)="addHistory()">Enviar</button>
 </div>
 <app-item-list></app-item-list>
 <br>
