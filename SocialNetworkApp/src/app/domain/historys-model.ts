@@ -1,5 +1,4 @@
 export class HistorysModel {
- 
 
     id:number;
     content:string;

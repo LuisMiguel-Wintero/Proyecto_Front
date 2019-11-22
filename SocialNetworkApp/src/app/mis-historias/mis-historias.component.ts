@@ -45,8 +45,4 @@ export class MisHistoriasComponent implements OnInit {
      .subscribe(historieta => this.historia.push(historieta));
   }
 
-
-
-
-
 }

@@ -5,7 +5,6 @@ import { Observable } from 'rxjs';
 import { HistorysModel } from '../domain/historys-model';
 
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -31,10 +30,6 @@ export class AppServicesService {
    addHistory (history: HistorysModel): Observable<HistorysModel> {
     return this.http.post<HistorysModel>('http://localhost:8080/messages',history,httpOptions);
      }
-
-
-
-
 
 }
 
